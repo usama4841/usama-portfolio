@@ -103,6 +103,40 @@
   align-items: center;
 }
 
+.ContactUsSnackBar > div {
+  color: #147a14;
+  background-color: #fffafa;
+  border-radius: 10px;
+  border: 1px solid #147a14;
+  box-shadow: 0px 5px 5px -3px #bdbdbd1c, 0px 8px 10px 1px #5553531e,
+    0px 3px 14px 2px #e6e6e631;
+}
+
+.ContactUsSnackBar
+  > .MuiPaper-root
+  > .MuiSnackbarContent-action
+  > .MuiButtonBase-root
+  > .MuiSvgIcon-root {
+  color: #147a14;
+}
+
+.ContactUsSnackBarError > div {
+  color: #f93600;
+  background-color: #fffafa;
+  border-radius: 10px;
+  border: 1px solid #f93600;
+  box-shadow: 0px 5px 5px -3px #bdbdbd1c, 0px 8px 10px 1px #5553531e,
+    0px 3px 14px 2px #e6e6e631;
+}
+
+.ContactUsSnackBarError
+  > .MuiPaper-root
+  > .MuiSnackbarContent-action
+  > .MuiButtonBase-root
+  > .MuiSvgIcon-root {
+  color: #f93600;
+}
+
 /* Media Queries for Responsive Design */
 @media (min-width: 768px) {
   .ContactBoxWrapper {

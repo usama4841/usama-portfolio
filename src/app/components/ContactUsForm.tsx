@@ -31,6 +31,14 @@ const contactUsFields = [
     className: "EmailTextField",
   },
   {
+    name: "phone",
+    type: "number",
+    label: "Contact No",
+    variant: "outlined",
+    margin: "normal",
+    className: "EmailTextField",
+  },
+  {
     name: "message",
     type: "text",
     label: "Message",
@@ -46,7 +54,9 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: 0,
     message: "",
+    date: new Date(),
   });
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [snackBarMessage, setSnackBarMessage] = useState("");
@@ -67,17 +77,23 @@ const ContactForm = () => {
       };
 
       await emailjs.send(
-        "service_youti7z",
-        "template_b87oqki",
+        "service_tgincmg",
+        "template_zbu6eok",
         templateParams,
-        "EYEAalzhJHIpPPAs2"
+        "w6wr85loFcrZo76CC"
       );
 
       setSnackBarMessage("Thank you, we'll contact you soon.");
       setIsSnackbarSuccess(true);
       setOpenSnackbar(true);
       // Reset form fields
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        phone: 0,
+        message: "",
+        date: new Date(),
+      });
     } catch (error) {
       setIsSnackbarSuccess(false);
       setSnackBarMessage("Something went wrong. Please try again later.");
@@ -104,7 +120,15 @@ const ContactForm = () => {
   );
 
   return (
-    <Box sx={{ maxWidth: 500, margin: "auto", padding: "20px", boxShadow: 10, borderRadius: "10px" }}>
+    <Box
+      sx={{
+        maxWidth: 500,
+        margin: "auto",
+        padding: "20px",
+        boxShadow: 10,
+        borderRadius: "10px",
+      }}
+    >
       <Typography variant="h5" className="ContactFormHeader" gutterBottom>
         GET IN TOUCH
       </Typography>
@@ -164,7 +188,7 @@ const ContactForm = () => {
         autoHideDuration={3000}
         onClose={handleCloseSnackbar}
         message={snackBarMessage}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         action={action}
       />
     </Box>

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+.ContactBoxWrapper {
+  background-color: #ffffff;
+  display: flex;
+  width: 100%;
+  padding: 7vh 15vw 0 15vw;
+  flex-wrap: wrap;
+}
+
+.ContactDetailsMainHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0d434f;
+}
+
+.ContactDetailsText {
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: normal;
+  color: #0d434f;
+}
+
+.ContactDetailsEmailBox {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.EmailIcon {
+  margin-right: 15px;
+  color: #0d434f;
+}
+
+.EmailHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #0d434f;
+}
+
+.EmailMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #0d434f;
+}
+
+.ContactDetailsPhoneBox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.PhoneIcon {
+  margin-right: 15px;
+  color: #0d434f;
+}
+
+.PhoneHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #0d434f;
+}
+
+.PhoneMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #0d434f;
+}
+
+.ContactDetailsSide {
+  width: 100%;
+  padding-right: 20px;
+  margin-bottom: 2rem;
+}
+
+.ContactFormSide {
+  width: 100%;
+}
+
+.ContactFormHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0d434f;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .ContactBoxWrapper {
+    flex-direction: row;
+    padding: 5vh 10vw;
+  }
+
+  .ContactDetailsSide {
+    width: 40%;
+  }
+
+  .ContactFormSide {
+    width: 60%;
+  }
+}

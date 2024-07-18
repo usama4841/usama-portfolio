@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.AboutBoxWrapper {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 7vh 15vw 0vw 15vw;
+}
+
+.AboutInnerBoxWrapper,
+.AboutInnerBoxWrapperSecond {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.AboutMeHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.AboutMeText {
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ExperienceMainBox,
+.EducationMainBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.ExperienceMainBoxFirst,
+.ExperienceMainBoxSecond {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ExperienceMainBoxSecondLine {
+  display: flex;
+}
+
+.ExperienceTitle {
+  padding-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.CompanyDetailsBox,
+.CompanyLocationBox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.CompanyName,
+.CompanyLocation,
+.ContractTime {
+  padding-left: 7px;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.3;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.Contract {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ContractTypeBox,
+.ContractLength {
+  display: flex;
+  align-items: center;
+}
+
+.ContractType {
+  background-color: #d7ffe0;
+  color: #018c0f;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 650;
+  padding: 0.2rem 0.5rem;
+  border-radius: 16px;
+}
+
+.ExperienceBoxDivider {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  opacity: 0.1;
+  height: 2px;
+  margin: 0 2.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .AboutBoxWrapper {
+    padding: 5vh 10vw 0vw 10vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .AboutBoxWrapper {
+    padding: 5vh 8vw 0vw 8vw;
+  }
+
+  .ExperienceMainBox,
+  .EducationMainBox {
+    flex-direction: column;
+  }
+
+  .ExperienceMainBoxFirst,
+  .ExperienceMainBoxSecond {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutBoxWrapper {
+    padding: 3vh 5vw 0vw 5vw;
+  }
+
+  .AboutMeHeader {
+    font-size: 2rem;
+  }
+
+  .AboutMeText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .ExperienceTitle {
+    font-size: 1.3rem;
+  }
+
+  .CompanyName,
+  .CompanyLocation,
+  .ContractTime {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .AboutBoxWrapper {
+    padding: 2vh 3vw 0vw 3vw;
+  }
+
+  .ExperienceMainBoxSecondLine {
+    display: block;
+  }
+
+  .CompanyDetailsBox,
+  .CompanyLocationBox {
+    margin-right: 0px;
+  }
+
+  .AboutMeHeader {
+    font-size: 1.8rem;
+  }
+
+  .AboutMeText {
+    font-size: 0.8rem;
+  }
+
+  .ExperienceTitle {
+    font-size: 1.2rem;
+  }
+
+  .CompanyName,
+  .CompanyLocation,
+  .ContractTime {
+    font-size: 0.7rem;
+  }
+
+  .ContractType {
+    font-size: 0.65rem;
+  }
+}

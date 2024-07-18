@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.MainBoxWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5vh 10vw 0vw 10vw;
+}
+
+.MainInnerBoxWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
+  width: 80%;
+}
+
+.MainBoxWrapperSecond {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2vh 10vw 0vw 10vw;
+}
+
+.MainInnerBoxWrapperSecond {
+  display: flex;
+  height: 30vh;
+  width: 80%;
+}
+
+.MainInnerBoxWrapperSecondText {
+  font-size: 0.95rem;
+  line-height: 1.1;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  width: 65%;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.MainInnerBoxPartOne {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MainInnerBoxPartTwo {
+  width: 50%;
+}
+
+.MainInnerBoxText {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 67, 79, 1) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.MainInnerBoxName {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 900;
+  background: linear-gradient(
+    90deg,
+    rgba(19, 176, 245, 1) 19%,
+    rgba(231, 15, 170, 1) 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.MainInnerBoxHand {
+  padding-left: 7px;
+  font-size: 2rem;
+}
+
+.MainInnerBoxPartTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PersonImage {
+  object-fit: fill;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 480px) and (max-width: 914px) {
+  .MainInnerBoxText {
+    font-size: 2.2rem;
+    
+  }
+  .MainInnerBoxName {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .MainBoxWrapper {
+    padding: 2vh 8vw 0vw 8vw;
+  }
+
+  .MainBoxWrapperSecond {
+    padding: 2vh 8vw 0vw 8vw;
+  }
+
+  .MainInnerBoxWrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+  }
+
+  .MainInnerBoxPartOne,
+  .MainInnerBoxPartTwo {
+    width: 100%;
+  }
+
+  .MainInnerBoxText,
+  .MainInnerBoxName {
+    font-size: 1.8rem;
+  }
+
+  .MainInnerBoxHand {
+    font-size: 1.5rem;
+  }
+
+  .MainInnerBoxWrapperSecondText {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .MainInnerBoxWrapperSecond {
+    justify-content: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .MainBoxWrapper {
+    padding: 2vh 8vw 0vw 8vw;
+  }
+
+  .MainBoxWrapperSecond {
+    padding: 2vh 8vw 0vw 8vw;
+  }
+
+  .MainInnerBoxText,
+  .MainInnerBoxName {
+    font-size: 1.5rem;
+  }
+
+  .MainInnerBoxHand {
+    font-size: 1.2rem;
+  }
+
+  .MainInnerBoxWrapperSecondText {
+    .MainBoxWrapper {
+      padding: 2vh 8vw 0vw 8vw;
+    }
+
+    .MainBoxWrapperSecond {
+      padding: 2vh 8vw 0vw 8vw;
+    }
+
+    font-size: 0.9rem;
+  }
+}

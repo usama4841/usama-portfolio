@@ -17,9 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ backgroundColor: "#FFFFFF", overflow: "hidden scroll" }}>
+      <body
+        className={inter.className}
+        style={{ backgroundColor: "#FFFFFF", overflow: "hidden scroll" }}
+      >
         <div style={{ height: "100vh", backgroundColor: "#FFFFFF" }}>
-          <div style={{ height: "15vh" }}>
+          <div style={{ height: "15vh", position: "sticky", zIndex: "1000" }}>
             <NavbarComponent />
           </div>
           <div style={{ height: "84vh" }}>{children}</div>

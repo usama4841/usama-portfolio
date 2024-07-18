@@ -13,6 +13,14 @@ import {
 import "@/app/CSS/contactus.css";
 import CloseIcon from "@mui/icons-material/Close";
 
+interface ContactTypes {
+  name: string;
+  email: string;
+  phone: number | null;
+  message: string;
+  date: Date;
+}
+
 const contactUsFields = [
   {
     name: "name",
@@ -43,10 +51,10 @@ const contactUsFields = [
 ];
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactTypes>({
     name: "",
     email: "",
-    phone: 0,
+    phone: null,
     message: "",
     date: new Date(),
   });
@@ -82,7 +90,7 @@ const ContactForm = () => {
       setFormData({
         name: "",
         email: "",
-        phone: 0,
+        phone: null,
         message: "",
         date: new Date(),
       });

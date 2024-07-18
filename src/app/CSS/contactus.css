@@ -10,43 +10,69 @@
 
 .ContactDetailsMainHeading {
   font-family: "Poppins", sans-serif;
-  font-size: 1.3rem;
+  font-size: 2.1rem;
   font-weight: bold;
   color: #0d434f;
+  margin-bottom: 20px;
 }
 
 .ContactDetailsText {
   font-family: "Poppins", sans-serif;
   text-align: justify;
-  font-size: 1rem;
-  line-height: 1.1;
+  font-size: 1.1rem;
+  line-height: 1.2;
   font-weight: normal;
   color: #0d434f;
 }
 
 .ContactDetailsEmailBox {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
 .EmailIcon {
+  font-size: 2.5rem;
   margin-right: 15px;
   color: #0d434f;
 }
 
 .EmailHeader {
   font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   line-height: 1;
   font-weight: bold;
   color: #0d434f;
+  padding-bottom: 7px;
 }
 
 .EmailMain {
   font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #0d434f;
+}
+
+.PhoneIcon {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  color: #0d434f;
+}
+
+.PhoneHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #0d434f;
+  padding-bottom: 7px;
+}
+
+.PhoneMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
   line-height: 1;
   font-weight: normal;
   color: #0d434f;
@@ -56,27 +82,6 @@
   display: flex;
   justify-content: start;
   align-items: center;
-}
-
-.PhoneIcon {
-  margin-right: 15px;
-  color: #0d434f;
-}
-
-.PhoneHeader {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
-  line-height: 1;
-  font-weight: bold;
-  color: #0d434f;
-}
-
-.PhoneMain {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
-  line-height: 1;
-  font-weight: normal;
-  color: #0d434f;
 }
 
 .ContactDetailsSide {
@@ -145,10 +150,86 @@
   }
 
   .ContactDetailsSide {
-    width: 40%;
+    width: 50%;
   }
 
   .ContactFormSide {
-    width: 60%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 896px) {
+  .ContactDetailsText {
+    width: 90%;
+  }
+}
+
+@media (max-width: 551px) {
+  .EmailMain {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .EmailIcon,
+  .PhoneIcon {
+    font-size: 2rem;
+  }
+  .EmailHeader,
+  .PhoneHeader {
+    font-size: 1.1rem;
+  }
+  .EmailMain,
+  .PhoneMain {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .EmailIcon,
+  .PhoneIcon {
+    font-size: 1.8rem;
+  }
+  .EmailHeader,
+  .PhoneHeader {
+    font-size: 1rem;
+  }
+  .EmailMain,
+  .PhoneMain {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .EmailIcon,
+  .PhoneIcon {
+    font-size: 1.6rem;
+  }
+  .EmailHeader,
+  .PhoneHeader {
+    font-size: 0.9rem;
+  }
+  .EmailMain,
+  .PhoneMain {
+    font-size: 0.9rem;
+  }
+  .ContactDetailsEmailBox {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .EmailIcon,
+  .PhoneIcon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+  .EmailHeader,
+  .PhoneHeader {
+    font-size: 0.8rem;
+  }
+  .EmailMain,
+  .PhoneMain {
+    font-size: 0.8rem;
   }
 }

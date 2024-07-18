@@ -114,7 +114,7 @@ const ContactForm = () => {
   return (
     <Box
       sx={{
-        maxWidth: 500,
+        maxWidth: 520,
         margin: "auto",
         padding: "20px",
         boxShadow: 10,

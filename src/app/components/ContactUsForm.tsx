@@ -119,6 +119,7 @@ const ContactForm = () => {
         padding: "20px",
         boxShadow: 10,
         borderRadius: "10px",
+        marginBottom: "20px",
       }}
     >
       <Typography variant="h5" className="ContactFormHeader" gutterBottom>

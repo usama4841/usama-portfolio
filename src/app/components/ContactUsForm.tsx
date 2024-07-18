@@ -18,32 +18,24 @@ const contactUsFields = [
     name: "name",
     type: "text",
     label: "Name",
-    variant: "outlined",
-    margin: "normal",
     className: "NameTextField",
   },
   {
     name: "email",
     type: "email",
     label: "Email",
-    variant: "outlined",
-    margin: "normal",
     className: "EmailTextField",
   },
   {
     name: "phone",
     type: "number",
     label: "Contact No",
-    variant: "outlined",
-    margin: "normal",
     className: "EmailTextField",
   },
   {
     name: "message",
     type: "text",
     label: "Message",
-    variant: "outlined",
-    margin: "normal",
     className: "MessageTextField",
     multiline: true,
     rows: 4,
@@ -142,8 +134,8 @@ const ContactForm = () => {
             value={formData[field.name as keyof typeof formData]}
             onChange={handleChange}
             label={field.label}
-            variant={field.variant}
-            margin={field.margin}
+            variant="outlined"
+            margin="normal"
             multiline={field.multiline || false}
             rows={field.rows || 1}
             className={field.className}

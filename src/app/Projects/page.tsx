@@ -7,7 +7,6 @@ import NewsMonkey from "../../../public/NewsMonkey.svg";
 import GitHubDark from "../../../public/GitHubDark.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductionQuantityLimits } from "@mui/icons-material";
 
 const Projects = [
   {
@@ -90,7 +89,13 @@ export default function Page() {
                   </Box>
                   <Box className="GitHubLinkBox">
                     <Typography className="ProjectLinkText">
-                      <Link className="ProjectLink" href={project.link} target="_blank">View Code</Link>
+                      <Link
+                        className="ProjectLink"
+                        href={project.link}
+                        target="_blank"
+                      >
+                        View Code
+                      </Link>
                     </Typography>
                   </Box>
                 </Box>

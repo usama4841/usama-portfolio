@@ -28,8 +28,8 @@ export default function HomePage() {
                   className="PersonImage"
                   src={PersonImage}
                   alt="PersonName"
-                  height={250}
-                  width={250}
+                  height={280}
+                  width={280}
                 />
               </Box>
             </Box>

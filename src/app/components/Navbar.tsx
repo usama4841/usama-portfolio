@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -18,75 +18,119 @@ import PortfolioLogo from "../../../public/PortFolio-Logo.svg";
 import GitHubLogo from "../../../public/GitHub.svg";
 import TwitterLogo from "../../../public/Twitter.svg";
 import LinkedinLogo from "../../../public/Linkedin.svg";
+import DarkGitHub from "../../../public/DarkGitHub.svg";
+import DarkTwitter from "../../../public/DarkTwitter.svg";
+import DarkLinkedin from "../../../public/DarkLinkedin.svg";
 import MenuGitHub from "../../../public/MenuGitHub.svg";
 import MenuTwitter from "../../../public/MenuTwitter.svg";
 import MenuLinkedin from "../../../public/MenuLinkedin.svg";
 import MenuClose from "../../../public/MenuClose.svg";
 import NavButton from "../../../public/NavButton.svg";
+import DarkLogo from "../../../public/DarkLogo.svg";
 import "@/app/CSS/Navbar-CSS.css";
+import ToggleButton from "./ToggleButton";
+import { useTheme } from "@/app/context/themeContext";
 
 export default function NavbarComponent() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { mode } = useTheme();
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
 
   return (
-    <AppBar id="Navbar" position="static">
+    <AppBar id={mode === "light" ? "Navbar" : "DarkNavbar"} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>
               <Image
-                src={PortfolioLogo}
+                src={mode === "light" ? PortfolioLogo : DarkLogo}
                 alt="Portfolio"
-                // height="80"
-                // width="80"
               />
             </Link>
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-            <Link className="NavLink px-4" href="/" passHref>
+          <Box
+            className="px-4"
+            sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
+          >
+            <Link
+              className={mode === "light" ? "NavLink px-4" : "DarkNavLink px-4"}
+              href="/"
+              passHref
+            >
               Home
             </Link>
-            <Link className="NavLink px-4" href="/Projects" passHref>
+            <Link
+              className={mode === "light" ? "NavLink px-4" : "DarkNavLink px-4"}
+              href="/Projects"
+              passHref
+            >
               Projects
             </Link>
-            <Link className="NavLink px-4" href="/Skills" passHref>
+            <Link
+              className={mode === "light" ? "NavLink px-4" : "DarkNavLink px-4"}
+              href="/Skills"
+              passHref
+            >
               Skills
             </Link>
-            <Link className="NavLink px-4" href="/About" passHref>
+            <Link
+              className={mode === "light" ? "NavLink px-4" : "DarkNavLink px-4"}
+              href="/About"
+              passHref
+            >
               About
             </Link>
-            <Link className="NavLink px-4" href="/Contact" passHref>
+            <Link
+              className={mode === "light" ? "NavLink px-4" : "DarkNavLink px-4"}
+              href="/Contact"
+              passHref
+            >
               Contact
             </Link>
             <Link
-              className="NavLink px-1"
+              className={mode === "light" ? "NavLink px-1" : "DarkNavLink px-1"}
               href="https://github.com/usama4841"
               target="_blank"
               passHref
             >
-              <Image src={GitHubLogo} alt="Github" height="25" width="25" />
+              <Image
+                src={mode === "light" ? GitHubLogo : DarkGitHub}
+                alt="Github"
+                height="25"
+                width="25"
+              />
             </Link>
             <Link
-              className="NavLink px-1"
+              className={mode === "light" ? "NavLink px-1" : "DarkNavLink px-1"}
               href="https://x.com/Usama_p07?s=09"
               target="_blank"
               passHref
             >
-              <Image src={TwitterLogo} alt="Twitter" height="25" width="25" />
+              <Image
+                src={mode === "light" ? TwitterLogo : DarkTwitter}
+                alt="Twitter"
+                height="25"
+                width="25"
+              />
             </Link>
             <Link
-              className="NavLink px-1"
+              className={mode === "light" ? "NavLink px-1" : "DarkNavLink px-1"}
               href="https://www.linkedin.com/in/usama-patel-173a11220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               passHref
             >
-              <Image src={LinkedinLogo} alt="Linkedin" height="25" width="25" />
+              <Image
+                src={mode === "light" ? LinkedinLogo : DarkLinkedin}
+                alt="Linkedin"
+                height="25"
+                width="25"
+              />
             </Link>
           </Box>
+          <ToggleButton />
           <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -119,45 +163,35 @@ export default function NavbarComponent() {
                     />
                   </ListItem>
                   <Divider sx={{ backgroundColor: "white" }} />
-                  <ListItem>
-                    <ListItemText>
-                      <Link className="MenuNavLink" href="/" passHref>
-                        Home
-                      </Link>
-                    </ListItemText>
-                  </ListItem>
+                  <Link className="MenuNavLink" href="/" passHref>
+                    <ListItem>
+                      <ListItemText>Home</ListItemText>
+                    </ListItem>
+                  </Link>
                   <Divider sx={{ backgroundColor: "white", marginX: "20px" }} />
-                  <ListItem>
-                    <ListItemText>
-                      <Link className="MenuNavLink" href="/Projects" passHref>
-                        Projects
-                      </Link>
-                    </ListItemText>
-                  </ListItem>
+                  <Link className="MenuNavLink" href="/Projects" passHref>
+                    <ListItem>
+                      <ListItemText>Projects</ListItemText>
+                    </ListItem>
+                  </Link>
                   <Divider sx={{ backgroundColor: "white", marginX: "20px" }} />
-                  <ListItem>
-                    <ListItemText>
-                      <Link className="MenuNavLink" href="/Skills" passHref>
-                        Skills
-                      </Link>
-                    </ListItemText>
-                  </ListItem>
+                  <Link className="MenuNavLink" href="/Skills" passHref>
+                    <ListItem>
+                      <ListItemText>Skills</ListItemText>
+                    </ListItem>
+                  </Link>
                   <Divider sx={{ backgroundColor: "white", marginX: "20px" }} />
-                  <ListItem>
-                    <ListItemText>
-                      <Link className="MenuNavLink" href="/About" passHref>
-                        About
-                      </Link>
-                    </ListItemText>
-                  </ListItem>
+                  <Link className="MenuNavLink" href="/About" passHref>
+                    <ListItem>
+                      <ListItemText>About</ListItemText>
+                    </ListItem>
+                  </Link>
                   <Divider sx={{ backgroundColor: "white", marginX: "20px" }} />
-                  <ListItem>
-                    <ListItemText>
-                      <Link className="MenuNavLink" href="/Contact" passHref>
-                        Contact
-                      </Link>
-                    </ListItemText>
-                  </ListItem>
+                  <Link className="MenuNavLink" href="/Contact" passHref>
+                    <ListItem>
+                      <ListItemText>Contact</ListItemText>
+                    </ListItem>
+                  </Link>
                   <Divider sx={{ backgroundColor: "white", marginX: "20px" }} />
                   <ListItem
                     className="py-4"

@@ -1,29 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .MainBoxWrapper {
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100%;
   padding: 5vh 10vw 0vw 10vw;
 }
 
-.MainInnerBoxWrapper {
+.DarkMainBoxWrapper {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 5vh 10vw 0vw 10vw;
+}
+
+.MainInnerBoxWrapper,
+.DarkMainInnerBoxWrapper {
   display: flex;
   justify-content: space-between;
-  /* height: 40vh; */
   width: 80%;
 }
 
 .MainBoxWrapperSecond {
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 2vh 10vw 0vw 10vw;
 }
 
-.MainInnerBoxWrapperSecond {
+.DarkMainBoxWrapperSecond {
+  background-color: #191919;
   display: flex;
-  height: 30vh;
+  justify-content: center;
+  width: 100%;
+  padding: 2vh 10vw 0vw 10vw;
+}
+
+.MainInnerBoxWrapperSecond,
+.DarkMainInnerBoxWrapperSecond {
+  display: flex;
   width: 80%;
 }
 
@@ -32,26 +52,42 @@
   line-height: 1.1;
   text-align: justify;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   width: 60%;
   background: linear-gradient(
     90deg,
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
+  background-clip: text; 
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.MainInnerBoxPartOne {
+.DarkMainInnerBoxWrapperSecondText {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  width: 70%;
+  color: #d9d9d9;
+}
+
+.MainInnerBoxPartOne,
+.DarkMainInnerBoxPartOne {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.MainInnerBoxPartTwo {
+.MainInnerBoxPartTwo,
+.DarkMainInnerBoxPartTwo {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .MainInnerBoxText {
@@ -64,11 +100,21 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
+  background-clip: text; 
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.MainInnerBoxName {
+.DarkMainInnerBoxText {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #d9d9d9;
+}
+
+.MainInnerBoxName,
+.DarkMainInnerBoxName {
   font-family: "Poppins", sans-serif;
   font-size: 2.8rem;
   line-height: 1.2;
@@ -78,106 +124,115 @@
     rgba(19, 176, 245, 1) 19%,
     rgba(231, 15, 170, 1) 100%
   );
+  background-clip: text; 
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.MainInnerBoxHand {
+.MainInnerBoxHand,
+.DarkMainInnerBoxHand {
   padding-left: 7px;
   font-size: 2.3rem;
 }
 
-.MainInnerBoxPartTwo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.PersonImage {
+.PersonImage,
+.DarkPersonImage {
   object-fit: fill;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-  .MainInnerBoxWrapperSecondText {
+  .MainInnerBoxWrapperSecondText,
+  .DarkMainInnerBoxWrapperSecondText {
     width: 100%;
   }
 }
 
 @media (min-width: 480px) and (max-width: 914px) {
-  .MainInnerBoxText {
+  .MainInnerBoxText,
+  .DarkMainInnerBoxText {
     font-size: 2.2rem;
   }
-  .MainInnerBoxName {
+  .MainInnerBoxName,
+  .DarkMainInnerBoxName {
     font-size: 2.2rem;
   }
 }
+
 @media (max-width: 768px) {
-  .MainBoxWrapper {
+  .MainBoxWrapper,
+  .DarkMainBoxWrapper {
     padding: 2vh 8vw 0vw 8vw;
   }
 
-  .MainBoxWrapperSecond {
+  .MainBoxWrapperSecond,
+  .DarkMainBoxWrapperSecond {
     padding: 2vh 8vw 0vw 8vw;
   }
 
-  .MainInnerBoxWrapper {
+  .MainInnerBoxWrapper,
+  .DarkMainInnerBoxWrapper {
     flex-direction: column-reverse;
     align-items: center;
     height: auto;
   }
 
   .MainInnerBoxPartOne,
-  .MainInnerBoxPartTwo {
+  .DarkMainInnerBoxPartOne,
+  .MainInnerBoxPartTwo,
+  .DarkMainInnerBoxPartTwo {
     width: 100%;
   }
 
   .MainInnerBoxText,
-  .MainInnerBoxName {
+  .DarkMainInnerBoxText,
+  .MainInnerBoxName,
+  .DarkMainInnerBoxName {
     font-size: 1.8rem;
   }
 
-  .MainInnerBoxHand {
+  .MainInnerBoxHand,
+  .DarkMainInnerBoxHand {
     font-size: 1.5rem;
   }
 
-  .MainInnerBoxWrapperSecondText {
+  .MainInnerBoxWrapperSecondText,
+  .DarkMainInnerBoxWrapperSecondText {
     width: 90%;
     font-size: 1rem;
   }
 
-  .MainInnerBoxWrapperSecond {
+  .MainInnerBoxWrapperSecond,
+  .DarkMainInnerBoxWrapperSecond {
     justify-content: stretch;
   }
 }
 
 @media (max-width: 480px) {
-  .MainBoxWrapper {
+  .MainBoxWrapper,
+  .DarkMainBoxWrapper {
     padding: 2vh 8vw 0vw 8vw;
   }
 
-  .MainBoxWrapperSecond {
+  .MainBoxWrapperSecond,
+  .DarkMainBoxWrapperSecond {
     padding: 2vh 8vw 0vw 8vw;
   }
 
   .MainInnerBoxText,
-  .MainInnerBoxName {
+  .DarkMainInnerBoxText,
+  .MainInnerBoxName,
+  .DarkMainInnerBoxName {
     font-size: 1.5rem;
   }
 
-  .MainInnerBoxHand {
+  .MainInnerBoxHand,
+  .DarkMainInnerBoxHand {
     font-size: 1.2rem;
   }
 
-  .MainInnerBoxWrapperSecondText {
-    .MainBoxWrapper {
-      padding: 2vh 8vw 0vw 8vw;
-    }
-
-    .MainBoxWrapperSecond {
-      padding: 2vh 8vw 0vw 8vw;
-    }
-
+  .MainInnerBoxWrapperSecondText,
+  .DarkMainInnerBoxWrapperSecondText {
     font-size: 0.9rem;
   }
 }

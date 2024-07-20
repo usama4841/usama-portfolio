@@ -6,8 +6,16 @@
   padding: 7vh 15vw 0vw 15vw;
 }
 
+.DarkAboutBoxWrapper {
+  background-color: #191919;
+  width: 100%;
+  padding: 7vh 15vw 0vw 15vw;
+}
+
 .AboutInnerBoxWrapper,
-.AboutInnerBoxWrapperSecond {
+.AboutInnerBoxWrapperSecond,
+.DarkAboutInnerBoxWrapper,
+.DarkAboutInnerBoxWrapperSecond {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -23,9 +31,16 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.DarkAboutMeHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #d9d9d9;
 }
 
 .AboutMeText {
@@ -39,9 +54,18 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.DarkAboutMeText {
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #d9d9d9;
 }
 
 .ExperienceMainBox,
@@ -54,15 +78,28 @@
   border-radius: 8px;
 }
 
+.DarkExperienceMainBox,
+.DarkEducationMainBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #191919;
+  border-radius: 8px;
+}
+
 .ExperienceMainBoxFirst,
-.ExperienceMainBoxSecond {
+.ExperienceMainBoxSecond,
+.DarkExperienceMainBoxFirst,
+.DarkExperienceMainBoxSecond {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.ExperienceMainBoxSecondLine {
+.ExperienceMainBoxSecondLine,
+.DarkExperienceMainBoxSecondLine {
   display: flex;
 }
 
@@ -76,13 +113,23 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
+.DarkExperienceTitle {
+  padding-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
 .CompanyDetailsBox,
-.CompanyLocationBox {
+.CompanyLocationBox,
+.DarkCompanyDetailsBox,
+.DarkCompanyLocationBox {
   display: flex;
   align-items: center;
   margin-right: 15px;
@@ -100,9 +147,19 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.DarkCompanyName,
+.DarkCompanyLocation,
+.DarkContractTime {
+  padding-left: 7px;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.3;
+  color: #d9d9d9;
 }
 
 .Contract {
@@ -112,8 +169,17 @@
   align-items: center;
 }
 
+.DarkContract {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .ContractTypeBox,
-.ContractLength {
+.ContractLength,
+.DarkContractTypeBox,
+.DarkContractLength {
   display: flex;
   align-items: center;
 }
@@ -121,6 +187,16 @@
 .ContractType {
   background-color: #d7ffe0;
   color: #018c0f;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 650;
+  padding: 0.2rem 0.5rem;
+  border-radius: 16px;
+}
+
+.DarkContractType {
+  background-color: #d7ffe0;
+  color: #01778c;
   font-size: 0.75rem;
   font-family: "Poppins", sans-serif;
   font-weight: 650;
@@ -139,88 +215,122 @@
   margin: 0 2.5rem;
 }
 
+.DarkExperienceBoxDivider {
+  background: linear-gradient(
+    90deg,
+    rgb(165, 165, 165) 19%,
+    rgba(30, 50, 54, 1) 88%
+  );
+  opacity: 0.1;
+  height: 2px;
+  margin: 0 2.5rem;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
-  .AboutBoxWrapper {
+  .AboutBoxWrapper,
+  .DarkAboutBoxWrapper {
     padding: 5vh 10vw 0vw 10vw;
   }
 }
 
 @media (max-width: 992px) {
-  .AboutBoxWrapper {
+  .AboutBoxWrapper,
+  .DarkAboutBoxWrapper {
     padding: 5vh 8vw 0vw 8vw;
   }
 
   .ExperienceMainBox,
-  .EducationMainBox {
+  .EducationMainBox,
+  .DarkExperienceMainBox,
+  .DarkEducationMainBox {
     flex-direction: column;
   }
 
   .ExperienceMainBoxFirst,
-  .ExperienceMainBoxSecond {
+  .ExperienceMainBoxSecond,
+  .DarkExperienceMainBoxFirst,
+  .DarkExperienceMainBoxSecond {
     width: 100%;
     justify-content: space-between;
   }
 }
 
 @media (max-width: 768px) {
-  .AboutBoxWrapper {
+  .AboutBoxWrapper,
+  .DarkAboutBoxWrapper {
     padding: 3vh 5vw 0vw 5vw;
   }
 
-  .AboutMeHeader {
+  .AboutMeHeader,
+  .DarkAboutMeHeader {
     font-size: 2rem;
   }
 
-  .AboutMeText {
+  .AboutMeText,
+  .DarkAboutMeText {
     font-size: 0.9rem;
     line-height: 1.4;
   }
 
-  .ExperienceTitle {
+  .ExperienceTitle,
+  .DarkExperienceTitle {
     font-size: 1.3rem;
   }
 
   .CompanyName,
   .CompanyLocation,
-  .ContractTime {
+  .ContractTime,
+  .DarkCompanyName,
+  .DarkCompanyLocation,
+  .DarkContractTime {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 576px) {
-  .AboutBoxWrapper {
+  .AboutBoxWrapper,
+  .DarkAboutBoxWrapper {
     padding: 2vh 3vw 0vw 3vw;
   }
 
-  .ExperienceMainBoxSecondLine {
+  .ExperienceMainBoxSecondLine,
+  .DarkExperienceMainBoxSecondLine {
     display: block;
   }
 
   .CompanyDetailsBox,
-  .CompanyLocationBox {
+  .CompanyLocationBox,
+  .DarkCompanyDetailsBox,
+  .DarkCompanyLocationBox {
     margin-right: 0px;
   }
 
-  .AboutMeHeader {
+  .AboutMeHeader .DarkAboutMeHeader {
     font-size: 1.8rem;
   }
 
-  .AboutMeText {
+  .AboutMeText,
+  .DarkAboutMeText {
     font-size: 0.8rem;
   }
 
-  .ExperienceTitle {
+  .ExperienceTitle,
+  .DarkExperienceTitle {
     font-size: 1.2rem;
   }
 
   .CompanyName,
   .CompanyLocation,
-  .ContractTime {
+  .ContractTime,
+  .DarkCompanyName,
+  .DarkCompanyLocation,
+  .DarkContractTime {
     font-size: 0.7rem;
   }
 
-  .ContractType {
+  .ContractType,
+  .DarkContractType {
     font-size: 0.65rem;
   }
 }

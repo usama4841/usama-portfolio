@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import "@/app/CSS/contactus.css";
 import CloseIcon from "@mui/icons-material/Close";
+import { useTheme } from "@/app/context/themeContext";
 
 interface ContactTypes {
   name: string;
@@ -51,6 +52,7 @@ const contactUsFields = [
 ];
 
 const ContactForm = () => {
+  const { mode } = useTheme();
   const [formData, setFormData] = useState<ContactTypes>({
     name: "",
     email: "",
@@ -86,7 +88,6 @@ const ContactForm = () => {
       setSnackBarMessage("Thank you, we'll contact you soon.");
       setIsSnackbarSuccess(true);
       setOpenSnackbar(true);
-      // Reset form fields
       setFormData({
         name: "",
         email: "",
@@ -130,10 +131,19 @@ const ContactForm = () => {
         marginBottom: "20px",
       }}
     >
-      <Typography variant="h5" className="ContactFormHeader" gutterBottom>
+      <Typography
+        variant="h5"
+        className={
+          mode === "light" ? "ContactFormHeader" : "DarkContactFormHeader"
+        }
+        gutterBottom
+      >
         GET IN TOUCH
       </Typography>
-      <form className="ContactForm" onSubmit={handleSubmit}>
+      <form
+        className={mode === "light" ? "ContactForm" : "DarkContactForm"}
+        onSubmit={handleSubmit}
+      >
         {contactUsFields.map((field, index) => (
           <TextField
             key={index}
@@ -168,7 +178,11 @@ const ContactForm = () => {
           />
         ))}
         <Button
-          className="SubmitButton py-2 mt-3"
+          className={
+            mode === "light"
+              ? "SubmitButton py-2 mt-3"
+              : "DarkSubmitButton py-2 mt-3"
+          }
           type="submit"
           variant="contained"
           color="primary"

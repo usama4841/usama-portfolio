@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import "@/app/CSS/projects.css";
@@ -5,8 +6,10 @@ import InoteBook from "../../../public/iNotebook.svg";
 import FitHub from "../../../public/FitHub.svg";
 import NewsMonkey from "../../../public/NewsMonkey.svg";
 import GitHubDark from "../../../public/GitHubDark.svg";
+import GitHubLogo from "../../../public/GitHub.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "@/app/context/themeContext";
 
 const Projects = [
   {
@@ -36,61 +39,145 @@ const Projects = [
 ];
 
 export default function Page() {
+  const { mode } = useTheme();
+  console.log("Project Theme mode:", mode);
   return (
-    <Box className="ProjectBoxWrapper">
-      <Box className="ProjectInnerBoxWrapperSecond">
-        <Typography className="ProjectHeader">Projects</Typography>
-        <Typography className="ProjectText">
+    <Box
+      className={
+        mode === "light" ? "ProjectBoxWrapper" : "DarkProjectBoxWrapper"
+      }
+    >
+      <Box
+        className={
+          mode === "light"
+            ? "ProjectInnerBoxWrapperSecond"
+            : "DarkProjectInnerBoxWrapperSecond"
+        }
+      >
+        <Typography
+          className={mode === "light" ? "ProjectHeader" : "DarkProjectHeader"}
+        >
+          Projects
+        </Typography>
+        <Typography
+          className={mode === "light" ? "ProjectText" : "DarkProjectText"}
+        >
           Things I've Built So Far
         </Typography>
-        <Grid container className="ProjectMainBox">
+        <Grid
+          container
+          className={mode === "light" ? "ProjectMainBox" : "DarkProjectMainBox"}
+        >
           {Projects.map((project, index) => (
-            <Grid
-              item
-              xs={11}
-              sm={5}
-              md={5.4}
-              lg={3.7}
-              xl={3}
+            <Box
               key={index}
-              className="ProjectItem mx-2 mb-4"
+              sx={{
+                width: {
+                  xs: "100%",
+                  sm: "48%",
+                  md: "30%",
+                  lg: "30%",
+                },
+                margin: {
+                  xs: "10px 0",
+                  sm: "10px 1%",
+                  md: "10px 1.5%",
+                  lg: "10px 1%",
+                },
+                // padding: "15px",
+                backgroundColor: mode === "light" ? "#ffffff" : "#363636",
+                boxShadow: "2px 5px 8px rgba(0, 0, 0, 0.4)",
+                borderRadius: "10px",
+              }}
+              className={mode === "light" ? "ProjectItem" : "DarkProjectItem"}
             >
-              <Box className="ProjectImageBox">
+              <Box
+                className={
+                  mode === "light" ? "ProjectImageBox" : "DarkProjectImageBox"
+                }
+              >
                 <Image
-                  className="ProjectImage"
+                  className={
+                    mode === "light" ? "ProjectImage" : "DarkProjectImage"
+                  }
                   src={project.image}
-                  alt="InoteBook"
+                  alt={project.title}
                 />
               </Box>
-              <Box className="ProjectDescriptionMainBox px-3">
-                <Box className="ProjectTitleBox">
-                  <Typography className="ProjectTitle">
+              <Box
+                className={
+                  mode === "light"
+                    ? "ProjectDescriptionMainBox px-3"
+                    : "DarkProjectDescriptionMainBox px-3"
+                }
+              >
+                <Box
+                  className={
+                    mode === "light" ? "ProjectTitleBox" : "DarkProjectTitleBox"
+                  }
+                >
+                  <Typography
+                    className={
+                      mode === "light" ? "ProjectTitle" : "DarkProjectTitle"
+                    }
+                  >
                     {project.title}
                   </Typography>
                 </Box>
-                {/* <Box className="ProjectDescriptionBox"> */}
-                <Typography className="ProjectDescription pb-3">
+                <Typography
+                  className={
+                    mode === "light"
+                      ? "ProjectDescription pb-3"
+                      : "DarkProjectDescription pb-3"
+                  }
+                >
                   {project.description.substring(0, 69) + "..."}
                 </Typography>
-                {/* </Box>
-                <Box className="ProjectTagBox"> */}
-                <Typography className="ProjectTag pb-1">
-                  <span className="TagHead">Tech stack: </span> {project.tags}
+                <Typography
+                  className={
+                    mode === "light" ? "ProjectTag pb-1" : "DarkProjectTag pb-1"
+                  }
+                >
+                  <span
+                    className={mode === "light" ? "TagHead" : "DarkTagHead"}
+                  >
+                    Tech stack:{" "}
+                  </span>{" "}
+                  {project.tags}
                 </Typography>
-                {/* {/* </Box> */}
-                <Box className="ProjectLinkBox">
-                  <Box className="GitHubImageBox">
+                <Box
+                  className={
+                    mode === "light" ? "ProjectLinkBox" : "DarkProjectLinkBox"
+                  }
+                >
+                  <Box
+                    className={
+                      mode === "light" ? "GitHubImageBox" : "DarkGitHubImageBox"
+                    }
+                  >
                     <Image
-                      src={GitHubDark}
+                      src={mode === "light" ? GitHubDark : GitHubLogo}
                       alt="GitHub"
                       height={20}
                       width={20}
                     />
                   </Box>
-                  <Box className="GitHubLinkBox">
-                    <Typography className="ProjectLinkText">
+                  <Box
+                    className={
+                      mode === "light" ? "GitHubLinkBox" : "DarkGitHubLinkBox"
+                    }
+                  >
+                    <Typography
+                      className={
+                        mode === "light"
+                          ? "ProjectLinkText"
+                          : "DarkProjectLinkText"
+                      }
+                    >
                       <Link
-                        className="ProjectLink"
+                        className={
+                          mode === "light" ? "ProjectLink" : "DarkProjectLink"
+                        }
                         href={project.link}
                         target="_blank"
                       >
@@ -100,7 +187,7 @@ export default function Page() {
                   </Box>
                 </Box>
               </Box>
-            </Grid>
+            </Box>
           ))}
         </Grid>
       </Box>

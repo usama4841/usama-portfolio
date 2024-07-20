@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, Grid } from "@mui/material";
 import React from "react";
 import "@/app/CSS/skills.css";
@@ -12,9 +13,20 @@ import JavaScriptSkill from "../../../public/JavaScriptSkill.svg";
 import NodeJsSkill from "../../../public/NodeJsSkill.svg";
 import MongoDBSkill from "../../../public/MongoDBSkill.svg";
 import ReduxSkill from "../../../public/ReduxSkill.svg";
-import { Height } from "@mui/icons-material";
+import DarkNextJsSkill from "../../../public/DarkNextJsSkill.svg";
+import DarkHTMLSkill from "../../../public/DarkHTMLSkill.svg";
+import DarkCSSSkill from "../../../public/DarkCSSSkill.svg";
+import DarkBootstrapSkill from "../../../public/DarkBootstrapSkill.svg";
+import DarkTypeScriptSkill from "../../../public/DarkTypeScriptSkill.svg";
+import DarkReactJSSkill from "../../../public/DarkReactJSSkill.svg";
+import DarkJavaScriptSkill from "../../../public/DarkJavaScriptSkill.svg";
+import DarkMongoDBSkill from "../../../public/DarkMongoDBSkill.svg";
+import DarkNodeJsSkill from "../../../public/DarkNodeJsSkill.svg";
+import DarkReduxSkill from "../../../public/DarkReduxSkill.svg";
+import { useTheme } from "@/app/context/themeContext";
 
 export default function SkillsComponent() {
+  const { mode } = useTheme();
   const skills = [
     { src: NextJsSkill, alt: "NextJsSkill", Height: 100, width: 70 },
     { src: HTMLSkill, alt: "HTMLSkill", Height: 100, width: 70 },
@@ -28,22 +40,72 @@ export default function SkillsComponent() {
     { src: ReduxSkill, alt: "ReduxSkill", Height: 100, width: 70 },
   ];
 
+  const Darkskills = [
+    { src: DarkNextJsSkill, alt: "DarkNextJsSkill", Height: 100, width: 70 },
+    { src: DarkHTMLSkill, alt: "DarkHTMLSkill", Height: 100, width: 70 },
+    { src: DarkCSSSkill, alt: "DarkCSSSkill", Height: 100, width: 70 },
+    {
+      src: DarkBootstrapSkill,
+      alt: "DarkBootstrapSkill",
+      Height: 100,
+      width: 70,
+    },
+    {
+      src: DarkTypeScriptSkill,
+      alt: "DarkTypeScriptSkill",
+      Height: 100,
+      width: 70,
+    },
+    { src: DarkReactJSSkill, alt: "DarkReactJsSkill", Height: 100, width: 70 },
+    {
+      src: DarkJavaScriptSkill,
+      alt: "DarkJavaScriptSkill",
+      Height: 100,
+      width: 70,
+    },
+    { src: DarkNodeJsSkill, alt: "DarkNodeJsSkill", Height: 100, width: 70 },
+    { src: DarkMongoDBSkill, alt: "DarkMongoDBSkill", Height: 100, width: 70 },
+    { src: DarkReduxSkill, alt: "DarkReduxSkill", Height: 100, width: 70 },
+  ];
+
+  const selectedSkills = mode === "light" ? skills : Darkskills;
   return (
-    <Box className="SkillsBoxWrapper">
-      <Box className="SkillsInnerBoxWrapperSecond">
-        <Typography className="SkillsHeader">Skills</Typography>
-        <Grid container spacing={2} className="SkillsMainBox">
-          {skills.map((skill, index) => (
+    <Box
+      className={mode === "light" ? "SkillsBoxWrapper" : "DarkSkillsBoxWrapper"}
+    >
+      <Box
+        className={
+          mode === "light"
+            ? "SkillsInnerBoxWrapperSecond"
+            : "DarkSkillsInnerBoxWrapperSecond"
+        }
+      >
+        <Typography
+          className={mode === "light" ? "SkillsHeader" : "DarkSkillsHeader"}
+        >
+          Skills
+        </Typography>
+        <Grid
+          container
+          spacing={2}
+          className={mode === "light" ? "SkillsMainBox" : "DarkSkillsMainBox"}
+        >
+          {selectedSkills.map((skill, index) => (
             <Grid
               item
               xs={6}
               sm={4}
-              md={3} 
-              lg={2.4} 
+              md={3}
+              lg={2.4}
               key={index}
               className="pb-3"
             >
-              <Image src={skill.src} alt={skill.alt} height={skill.Height} width={skill.width}/>
+              <Image
+                src={skill.src}
+                alt={skill.alt}
+                height={skill.Height}
+                width={skill.width}
+              />
             </Grid>
           ))}
         </Grid>

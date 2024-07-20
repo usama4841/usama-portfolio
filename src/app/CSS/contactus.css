@@ -8,11 +8,27 @@
   flex-wrap: wrap;
 }
 
+.DarkContactBoxWrapper {
+  background-color: #191919;
+  display: flex;
+  width: 100%;
+  padding: 7vh 15vw 0 15vw;
+  flex-wrap: wrap;
+}
+
 .ContactDetailsMainHeading {
   font-family: "Poppins", sans-serif;
   font-size: 2.1rem;
   font-weight: bold;
   color: #0d434f;
+  margin-bottom: 20px;
+}
+
+.DarkContactDetailsMainHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #d9d9d9;
   margin-bottom: 20px;
 }
 
@@ -25,7 +41,17 @@
   color: #0d434f;
 }
 
-.ContactDetailsEmailBox {
+.DarkContactDetailsText {
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #d9d9d9;
+}
+
+.ContactDetailsEmailBox,
+.DarkContactDetailsEmailBox {
   margin-bottom: 40px;
   display: flex;
   justify-content: start;
@@ -38,12 +64,27 @@
   color: #0d434f;
 }
 
+.DarkEmailIcon {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  color: #d9d9d9;
+}
+
 .EmailHeader {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   line-height: 1;
   font-weight: bold;
   color: #0d434f;
+  padding-bottom: 7px;
+}
+
+.DarkEmailHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #d9d9d9;
   padding-bottom: 7px;
 }
 
@@ -55,10 +96,24 @@
   color: #0d434f;
 }
 
+.DarkEmailMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #d9d9d9;
+}
+
 .PhoneIcon {
   font-size: 2.5rem;
   margin-right: 15px;
   color: #0d434f;
+}
+
+.DarkPhoneIcon {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  color: #d9d9d9;
 }
 
 .PhoneHeader {
@@ -70,6 +125,15 @@
   padding-bottom: 7px;
 }
 
+.DarkPhoneHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #d9d9d9;
+  padding-bottom: 7px;
+}
+
 .PhoneMain {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
@@ -78,19 +142,30 @@
   color: #0d434f;
 }
 
-.ContactDetailsPhoneBox {
+.DarkPhoneMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #d9d9d9;
+}
+
+.ContactDetailsPhoneBox,
+.DarkContactDetailsPhoneBox {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-.ContactDetailsSide {
+.ContactDetailsSide,
+.DarkContactDetailsSide {
   width: 100%;
   padding-right: 20px;
   margin-bottom: 2rem;
 }
 
-.ContactFormSide {
+.ContactFormSide,
+.DarkContactFormSide {
   width: 100%;
 }
 
@@ -101,7 +176,15 @@
   color: #0d434f;
 }
 
-.ContactForm {
+.DarkContactFormHeader {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.ContactForm,
+.DarkContactForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,50 +227,63 @@
 
 /* Media Queries for Responsive Design */
 @media (min-width: 768px) {
-  .ContactBoxWrapper {
+  .ContactBoxWrapper,
+  .DarkContactBoxWrapper {
     flex-direction: row;
     padding: 5vh 10vw;
   }
 
-  .ContactDetailsSide {
+  .ContactDetailsSide,
+  .DarkContactDetailsSide {
     width: 50%;
   }
 
-  .ContactFormSide {
+  .ContactFormSide,
+  .DarkContactFormSide {
     width: 50%;
   }
 }
 
 @media (min-width: 896px) {
-  .ContactDetailsText {
+  .ContactDetailsText,
+  .DarkContactDetailsText {
     width: 90%;
   }
 }
 
 @media (max-width: 551px) {
-  .EmailMain {
+  .EmailMain,
+  .DarkEmailMain {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 1200px) {
   .EmailIcon,
-  .PhoneIcon {
+  .PhoneIcon,
+  .DarkEmailIcon,
+  .DarkPhoneIcon {
     font-size: 2rem;
   }
   .EmailHeader,
-  .PhoneHeader {
+  .PhoneHeader,
+  .DarkEmailHeader,
+  .DarkPhoneHeader {
     font-size: 1.1rem;
   }
   .EmailMain,
-  .PhoneMain {
+  .PhoneMain,
+  .DarkEmailMain,
+  .DarkPhoneMain {
     font-size: 1.1rem;
   }
 }
 
 @media (max-width: 992px) {
   .EmailIcon,
-  .PhoneIcon {
+  .PhoneIcon,
+  .DarkEmailIcon,
+  .DarkPhoneIcon {
     font-size: 1.8rem;
   }
   .EmailHeader,
@@ -195,41 +291,56 @@
     font-size: 1rem;
   }
   .EmailMain,
-  .PhoneMain {
+  .PhoneMain,
+  .DarkEmailMain,
+  .DarkPhoneMain {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .EmailIcon,
-  .PhoneIcon {
+  .PhoneIcon,
+  .DarkEmailIcon,
+  .DarkPhoneIcon {
     font-size: 1.6rem;
   }
   .EmailHeader,
-  .PhoneHeader {
+  .PhoneHeader,
+  .DarkEmailHeader,
+  .DarkPhoneHeader {
     font-size: 0.9rem;
   }
   .EmailMain,
-  .PhoneMain {
+  .PhoneMain,
+  .DarkEmailMain,
+  .DarkPhoneMain {
     font-size: 0.9rem;
   }
-  .ContactDetailsEmailBox {
+  .ContactDetailsEmailBox,
+  .DarkContactDetailsEmailBox {
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 576px) {
   .EmailIcon,
-  .PhoneIcon {
+  .PhoneIcon,
+  .DarkEmailIcon,
+  .DarkPhoneIcon {
     font-size: 1.4rem;
     margin-right: 10px;
   }
   .EmailHeader,
-  .PhoneHeader {
+  .PhoneHeader,
+  .DarkEmailHeader,
+  .DarkPhoneHeader {
     font-size: 0.8rem;
   }
   .EmailMain,
-  .PhoneMain {
+  .PhoneMain,
+  .DarkEmailMain,
+  .DarkPhoneMain {
     font-size: 0.8rem;
   }
 }

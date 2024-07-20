@@ -40,7 +40,6 @@ const Projects = [
 
 export default function Page() {
   const { mode } = useTheme();
-  console.log("Project Theme mode:", mode);
   return (
     <Box
       className={

@@ -8,13 +8,10 @@ import { useTheme } from "@/app/context/themeContext";
 
 export default function HomePage() {
   const { mode } = useTheme();
-  console.log("Theme mode:", mode);
   return (
     <>
       <Box
-        className={
-          mode === "light" ? "MainBoxWrapper" : "DarkMainBoxWrapper"
-        }
+        className={mode === "light" ? "MainBoxWrapper" : "DarkMainBoxWrapper"}
       >
         <Box
           className={
@@ -95,11 +92,9 @@ export default function HomePage() {
                 }
               >
                 <Image
-                className={
-                  mode === "light"
-                    ? "PersonImage"
-                    : "DarkPersonImage"
-                }
+                  className={
+                    mode === "light" ? "PersonImage" : "DarkPersonImage"
+                  }
                   src={PersonImage}
                   alt="PersonName"
                   height={270}
@@ -115,10 +110,13 @@ export default function HomePage() {
           mode === "light" ? "MainBoxWrapperSecond" : "DarkMainBoxWrapperSecond"
         }
       >
-        <Box 
-        className={
-          mode === "light" ? "MainInnerBoxWrapperSecond" : "DarkMainInnerBoxWrapperSecond"
-        }>
+        <Box
+          className={
+            mode === "light"
+              ? "MainInnerBoxWrapperSecond"
+              : "DarkMainInnerBoxWrapperSecond"
+          }
+        >
           <Typography
             className={
               mode === "light"

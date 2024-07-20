@@ -99,7 +99,6 @@ const ContactForm = () => {
       setIsSnackbarSuccess(false);
       setSnackBarMessage("Something went wrong. Please try again later.");
       setOpenSnackbar(true);
-      console.error("Error sending email:", error);
     }
   };
 

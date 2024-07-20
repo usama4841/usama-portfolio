@@ -18,7 +18,7 @@ import DarkHTMLSkill from "../../../public/DarkHTMLSkill.svg";
 import DarkCSSSkill from "../../../public/DarkCSSSkill.svg";
 import DarkBootstrapSkill from "../../../public/DarkBootstrapSkill.svg";
 import DarkTypeScriptSkill from "../../../public/DarkTypeScriptSkill.svg";
-import DarkReactJsSkill from "../../../public/DarkReactJSSkill.svg";
+import DarkReactJsSkill from "../../../public/DarkReactJsSkill.svg";
 import DarkJavaScriptSkill from "../../../public/DarkJavaScriptSkill.svg";
 import DarkMongoDBSkill from "../../../public/DarkMongoDBSkill.svg";
 import DarkNodeJsSkill from "../../../public/DarkNodeJsSkill.svg";

@@ -53,13 +53,13 @@
   text-align: justify;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
-  width: 60%;
+  width: 70%;
   background: linear-gradient(
     90deg,
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -100,7 +100,7 @@
     rgba(13, 67, 79, 1) 19%,
     rgba(30, 50, 54, 1) 88%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -124,7 +124,7 @@
     rgba(19, 176, 245, 1) 19%,
     rgba(231, 15, 170, 1) 100%
   );
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }

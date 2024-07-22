@@ -3,6 +3,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import "@/app/CSS/HomePage.css";
 import PersonImage from "../../../public/Person.svg";
+import ProgrammingVector from "../../../public/ProgrammingVector.svg";
+
 import Image from "next/image";
 import { useTheme } from "@/app/context/themeContext";
 
@@ -107,7 +109,9 @@ export default function HomePage() {
       </Box>
       <Box
         className={
-          mode === "light" ? "MainBoxWrapperSecond" : "DarkMainBoxWrapperSecond"
+          mode === "light"
+            ? "MainBoxWrapperSecond mt-4"
+            : "DarkMainBoxWrapperSecond mt-4"
         }
       >
         <Box
@@ -117,6 +121,12 @@ export default function HomePage() {
               : "DarkMainInnerBoxWrapperSecond"
           }
         >
+          <Image
+            src={ProgrammingVector}
+            alt="ProgrammingVector"
+            height={280}
+            width={280}
+          />
           <Typography
             className={
               mode === "light"
@@ -124,12 +134,22 @@ export default function HomePage() {
                 : "DarkMainInnerBoxWrapperSecondText"
             }
           >
-            Hello! I'm a web developer passionate about creating efficient,
-            user-friendly and visually appealing web applications.
+            Hello! <br />
             <br />
-            <br /> I believe in the power of programming to change the world and
-            that's why I enjoy every step of the development process. I'm
-            excited to collaborate with you and bring your ideas to life.
+            I’m a dedicated web developer with a strong passion for crafting
+            efficient, user-friendly, and visually stunning web applications.
+            With a deep understanding of modern web technologies and design
+            principles, I strive to create digital experiences that are not only
+            functional but also engaging and accessible.
+            <br />
+            <br /> I believe in the transformative power of technology and its
+            ability to make a significant impact on the world. This belief fuels
+            my enthusiasm for every stage of the development process—from
+            conceptualization and design to coding and deployment. I take pride
+            in writing clean, maintainable code and employing best practices to
+            ensure high performance and scalability.
+            <br />
+            <br /> Let’s make something amazing together!
           </Typography>
         </Box>
       </Box>

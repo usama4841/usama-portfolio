@@ -44,7 +44,8 @@
 .MainInnerBoxWrapperSecond,
 .DarkMainInnerBoxWrapperSecond {
   display: flex;
-  width: 80%;
+  width: 100%;
+  justify-content: center;
 }
 
 .MainInnerBoxWrapperSecondText {
@@ -121,8 +122,8 @@
   font-weight: 900;
   background: linear-gradient(
     90deg,
-    rgba(19, 176, 245, 1) 19%,
-    rgba(231, 15, 170, 1) 100%
+    #13b0f5 19%,
+    #e70faa 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -204,7 +205,9 @@
 
   .MainInnerBoxWrapperSecond,
   .DarkMainInnerBoxWrapperSecond {
-    justify-content: stretch;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 }
 

@@ -1,4 +1,3 @@
-// app/layout.tsx or _app.tsx
 import { ThemeProvider } from "@/app/context/themeContext";
 import { Inter } from "next/font/google";
 import "./globals.css";

@@ -51,10 +51,12 @@
 .MainInnerBoxWrapperSecondText {
   font-size: 1rem;
   line-height: 1.1;
+  display: flex;
+  justify-content: center;
   text-align: justify;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
-  width: 70%;
+  width: 100%;
   background: linear-gradient(
     90deg,
     rgba(13, 67, 79, 1) 19%,
@@ -68,11 +70,19 @@
 .DarkMainInnerBoxWrapperSecondText {
   font-size: 1rem;
   line-height: 1.1;
+  display: flex;
+  justify-content: center;
   text-align: justify;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   width: 70%;
   color: #d9d9d9;
+}
+
+.SecondBoxWrapper,
+.DarkSecondBoxWrapper {
+  display: flex;
+  width: 70%;
 }
 
 .MainInnerBoxPartOne,
@@ -120,11 +130,7 @@
   font-size: 2.8rem;
   line-height: 1.2;
   font-weight: 900;
-  background: linear-gradient(
-    90deg,
-    #13b0f5 19%,
-    #e70faa 100%
-  );
+  background: linear-gradient(90deg, #13b0f5 19%, #e70faa 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -203,8 +209,9 @@
     font-size: 1rem;
   }
 
-  .MainInnerBoxWrapperSecond,
-  .DarkMainInnerBoxWrapperSecond {
+  .SecondBoxWrapper,
+  .DarkSecondBoxWrapper {
+    width: 100%;
     flex-direction: column;
     align-items: center;
     height: auto;

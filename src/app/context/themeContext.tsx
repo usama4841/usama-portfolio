@@ -1,5 +1,11 @@
 "use client";
-import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -45,7 +51,8 @@ const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const theme = createTheme(getDesignTokens(mode));
 
   useEffect(() => {
-    document.body.style.backgroundColor = mode === "light" ? "#ffffff" : "#191919";
+    document.body.style.backgroundColor =
+      mode === "light" ? "#ffffff" : "#191919";
   }, [mode]);
 
   return (

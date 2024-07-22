@@ -126,37 +126,50 @@ export default function HomePage() {
               mode === "light" ? "SecondBoxWrapper" : "DarkSecondBoxWrapper"
             }
           >
-            <Image
-              src={ProgrammingVector}
-              alt="ProgrammingVector"
-              height={280}
-              width={280}
-            />
-            <Typography
+            <Box
               className={
-                mode === "light"
-                  ? "MainInnerBoxWrapperSecondText"
-                  : "DarkMainInnerBoxWrapperSecondText"
+                mode === "light" ? "SecondBoxPartOne" : "DarkSecondBoxPartOne"
               }
             >
-              Hello! <br />
-              <br />
-              I’m a dedicated web developer with a strong passion for crafting
-              efficient, user-friendly, and visually stunning web applications.
-              With a deep understanding of modern web technologies and design
-              principles, I strive to create digital experiences that are not
-              only functional but also engaging and accessible.
-              <br />
-              <br /> I believe in the transformative power of technology and its
-              ability to make a significant impact on the world. This belief
-              fuels my enthusiasm for every stage of the development
-              process—from conceptualization and design to coding and
-              deployment. I take pride in writing clean, maintainable code and
-              employing best practices to ensure high performance and
-              scalability.
-              <br />
-              <br /> Let’s make something amazing together!
-            </Typography>
+              <Image
+                src={ProgrammingVector}
+                alt="ProgrammingVector"
+                height={280}
+                width={280}
+              />
+            </Box>
+            <Box
+              className={
+                mode === "light" ? "SecondBoxPartTwo" : "DarkSecondBoxPartTwo"
+              }
+            >
+              <Typography
+                className={
+                  mode === "light"
+                    ? "MainInnerBoxWrapperSecondText"
+                    : "DarkMainInnerBoxWrapperSecondText"
+                }
+              >
+                Hello! <br />
+                <br />
+                I’m a dedicated web developer with a strong passion for crafting
+                efficient, user-friendly, and visually stunning web
+                applications. With a deep understanding of modern web
+                technologies and design principles, I strive to create digital
+                experiences that are not only functional but also engaging and
+                accessible.
+                <br />
+                <br /> I believe in the transformative power of technology and
+                its ability to make a significant impact on the world. This
+                belief fuels my enthusiasm for every stage of the development
+                process—from conceptualization and design to coding and
+                deployment. I take pride in writing clean, maintainable code and
+                employing best practices to ensure high performance and
+                scalability.
+                <br />
+                <br /> Let’s make something amazing together!
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>

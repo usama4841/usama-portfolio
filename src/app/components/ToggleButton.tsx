@@ -7,13 +7,12 @@ import { useTheme } from "../context/themeContext";
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.mode === "dark" ? "#ffb300" : "#f0f0f0",
-  border: `1px solid ${theme.palette.mode === "dark" ? "#ffb300" : "#333"}`,
-  backgroundColor: `${theme.palette.mode === "dark" ? "#f0f0f0" : "#333"}`,
+  backgroundColor: `${theme.palette.mode === "dark" ? "#f0f0f0" : "#666666"}`,
   borderRadius: "50%",
-  padding: "3px",
-  transition: "background-color 0.3s ease",
+  padding: "1px",
+  transition: "background-color 0.5s ease",
   "&:hover": {
-    backgroundColor: theme.palette.mode === "dark" ? "#333232" : "#6e6e6e",
+    backgroundColor: theme.palette.mode === "dark" ? "#333232" : "#474747",
   },
 }));
 

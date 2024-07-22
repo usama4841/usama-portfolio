@@ -117,8 +117,8 @@ export default function HomePage() {
         <Box
           className={
             mode === "light"
-              ? "MainInnerBoxWrapperSecond"
-              : "DarkMainInnerBoxWrapperSecond"
+              ? "MainInnerBoxWrapperSecond mt-4"
+              : "DarkMainInnerBoxWrapperSecond mt-4"
           }
         >
           <Box

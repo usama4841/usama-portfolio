@@ -79,15 +79,29 @@
   color: #d9d9d9;
 }
 
-.SecondBoxWrapper,
+.SecondBoxWrapper {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px 60px 10px 60px;
+  background-color: #d5d5d5;
+  width: 80%;
+  align-items: center;
+  height: auto;
+}
+
 .DarkSecondBoxWrapper {
   display: flex;
+  padding: 20px;
+  border-radius: 10px 60px 10px 60px;
+  background-color: #454545;
   width: 80%;
+  align-items: center;
+  height: auto;
 }
 
 .SecondBoxPartOne,
 .DarkSecondBoxPartOne {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +109,7 @@
 
 .SecondBoxPartTwo,
 .DarkSecondBoxPartTwo {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,8 +239,20 @@
     font-size: 0.9rem;
   }
 
-  .SecondBoxWrapper,
+  .SecondBoxWrapper {
+    padding: 20px;
+    border-radius: 20px 100px 20px 100px;
+    background-color: #b0b0b0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
   .DarkSecondBoxWrapper {
+    padding: 20px;
+    border-radius: 20px 100px 20px 100px;
+    background-color: #454545;
     width: 100%;
     flex-direction: column;
     align-items: center;

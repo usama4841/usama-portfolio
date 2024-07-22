@@ -22,7 +22,6 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -47,13 +46,11 @@ body {
   border-radius: 10px;
 }
 
-/* Custom Scrollbar for Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #888888 #ffffff;
 }
 
-/* Custom Scrollbar for IE and Edge */
 body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }

@@ -226,7 +226,6 @@
   margin: 0 2.5rem;
 }
 
-/* Responsive styles */
 @media (max-width: 1200px) {
   .AboutBoxWrapper,
   .DarkAboutBoxWrapper {

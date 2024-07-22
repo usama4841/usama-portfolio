@@ -83,7 +83,6 @@ export default function Page() {
                   md: "10px 1.5%",
                   lg: "10px 1%",
                 },
-                // padding: "15px",
                 backgroundColor: mode === "light" ? "#ffffff" : "#363636",
                 boxShadow: "2px 5px 8px rgba(0, 0, 0, 0.4)",
                 borderRadius: "10px",

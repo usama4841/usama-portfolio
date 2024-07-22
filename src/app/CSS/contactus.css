@@ -191,6 +191,75 @@
   align-items: center;
 }
 
+.TextField > .MuiInputBase-root > fieldset {
+  border-color: #0d434f;
+  margin-bottom: 1;
+}
+
+.TextField > .MuiInputBase-root > fieldset:hover {
+  border-color: #0e4957;
+}
+
+.TextField > .MuiInputBase-root > fieldset:focus {
+  border-color: #1a4d58;
+}
+
+.ContactForm .MuiFormControl-root > .MuiInputLabel-root {
+  color: #1a4d58;
+}
+
+.DarkTextField > .MuiInputBase-root > fieldset {
+  border-color: #00a1c5;
+  margin-bottom: 1;
+}
+
+.DarkTextField > .MuiInputBase-root > fieldset:hover {
+  border-color: #1ea1be;
+}
+
+.DarkTextField > .MuiInputBase-root > fieldset:focus {
+  border-color: #00a1c5;
+}
+
+.DarkContactForm .MuiFormControl-root > .MuiInputLabel-root {
+  color: #00a1c5;
+}
+
+.SubmitButton {
+  background: linear-gradient(
+    90deg,
+    rgb(84, 131, 142) 19% rgb(3, 89, 109, 1) 100%
+  );
+  transition: all 2s ease-out;
+}
+
+.SubmitButton:hover {
+  color: #d9d9d9;
+  background: linear-gradient(
+    90deg,
+    rgb(3, 89, 109, 1) 19%,
+    rgb(84, 131, 142) 100%
+  );
+  transition: all 2s ease-out;
+}
+
+.DarkSubmitButton {
+  background: linear-gradient(
+    90deg,
+    rgb(26, 182, 249) 19%,
+    rgb(108, 206, 248) 100%
+  );
+  transition: all 2s ease-out;
+}
+
+.DarkSubmitButton:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(108, 206, 248) 19% rgb(26, 182, 249) 100%
+  );
+  transition: all 2s ease-in;
+}
+
 .ContactUsSnackBar > div {
   color: #147a14;
   background-color: #fffafa;

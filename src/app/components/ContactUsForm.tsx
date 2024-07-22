@@ -77,35 +77,6 @@ const contactUsFields: Array<{
   },
 ];
 
-// const contactUsFields = [
-//   {
-//     name: "name",
-//     type: "text",
-//     label: "Name",
-//     className: "NameTextField",
-//   },
-//   {
-//     name: "email",
-//     type: "email",
-//     label: "Email",
-//     className: "EmailTextField",
-//   },
-//   {
-//     name: "phone",
-//     type: "number",
-//     label: "Contact No",
-//     className: "EmailTextField",
-//   },
-//   {
-//     name: "message",
-//     type: "text",
-//     label: "Message",
-//     className: "MessageTextField",
-//     multiline: true,
-//     rows: 4,
-//   },
-// ];
-
 const ContactForm = () => {
   const { mode } = useTheme();
   const {
@@ -197,6 +168,7 @@ const ContactForm = () => {
             defaultValue=""
             render={({ field: { onChange, value } }) => (
               <TextField
+                className={mode === "light" ? "TextField" : "DarkTextField"}
                 fullWidth
                 type={field.type}
                 name={field.name}
@@ -207,26 +179,8 @@ const ContactForm = () => {
                 margin="normal"
                 multiline={field.multiline || false}
                 rows={field.rows || 1}
-                className={field.className}
                 error={!!errors[field.name as keyof ContactTypes]}
                 helperText={errors[field.name as keyof ContactTypes]?.message}
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "#0d434f",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "#0e4957",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "#1a4d58",
-                    },
-                  },
-                  "& .MuiInputLabel-root.Mui-focused": {
-                    color: "#1a4d58",
-                  },
-                  marginBottom: 1,
-                }}
               />
             )}
           />
@@ -238,13 +192,9 @@ const ContactForm = () => {
               : "DarkSubmitButton py-2 mt-3"
           }
           type="submit"
-          variant="contained"
-          color="primary"
+          variant="outlined"
+          color="inherit"
           fullWidth
-          sx={{
-            backgroundColor: "#0d434f",
-            "&:hover": { backgroundColor: "#03596d" },
-          }}
         >
           Get In Touch
         </Button>

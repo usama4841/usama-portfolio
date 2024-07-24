@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Tooltip } from "@mui/material";
 import "@/app/CSS/projects.css";
 import InoteBook from "../../../public/iNotebook.svg";
 import FitHub from "../../../public/FitHub.svg";
@@ -122,15 +122,22 @@ export default function Page() {
                     {project.title}
                   </Typography>
                 </Box>
-                <Typography
+                <Tooltip
                   className={
-                    mode === "light"
-                      ? "ProjectDescription pb-3"
-                      : "DarkProjectDescription pb-3"
+                    mode === "light" ? "ToolTipBox p-2" : "DarkToolTipBox"
                   }
+                  title={project.description}
                 >
-                  {project.description.substring(0, 99) + "..."}
-                </Typography>
+                  <Typography
+                    className={
+                      mode === "light"
+                        ? "ProjectDescription pb-3"
+                        : "DarkProjectDescription pb-3"
+                    }
+                  >
+                    {project.description.substring(0, 99) + "..."}
+                  </Typography>
+                </Tooltip>
                 <Typography
                   className={
                     mode === "light" ? "ProjectTag pb-1" : "DarkProjectTag pb-1"

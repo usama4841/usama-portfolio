@@ -27,50 +27,58 @@ export default function HomePage() {
                 : "DarkMainInnerBoxPartOne"
             }
           >
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ width: "fit-content" }}>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Typography
+                  className={
+                    mode === "light"
+                      ? "MainInnerBoxText"
+                      : "DarkMainInnerBoxText"
+                  }
+                >
+                  Hi
+                </Typography>
+                <Typography
+                  className={
+                    mode === "light"
+                      ? "MainInnerBoxHand"
+                      : "DarkMainInnerBoxHand"
+                  }
+                >
+                  👋
+                </Typography>
+                <Typography
+                  className={
+                    mode === "light"
+                      ? "MainInnerBoxText"
+                      : "DarkMainInnerBoxText"
+                  }
+                >
+                  ,
+                </Typography>
+              </Box>
               <Typography
                 className={
                   mode === "light" ? "MainInnerBoxText" : "DarkMainInnerBoxText"
                 }
               >
-                Hi
+                My name is
               </Typography>
               <Typography
                 className={
-                  mode === "light" ? "MainInnerBoxHand" : "DarkMainInnerBoxHand"
+                  mode === "light" ? "MainInnerBoxName" : "DarkMainInnerBoxName"
                 }
               >
-                👋
+                Usama Patel,
               </Typography>
               <Typography
                 className={
                   mode === "light" ? "MainInnerBoxText" : "DarkMainInnerBoxText"
                 }
               >
-                ,
+                I build websites.
               </Typography>
             </Box>
-            <Typography
-              className={
-                mode === "light" ? "MainInnerBoxText" : "DarkMainInnerBoxText"
-              }
-            >
-              My name is
-            </Typography>
-            <Typography
-              className={
-                mode === "light" ? "MainInnerBoxName" : "DarkMainInnerBoxName"
-              }
-            >
-              Usama Patel,
-            </Typography>
-            <Typography
-              className={
-                mode === "light" ? "MainInnerBoxText" : "DarkMainInnerBoxText"
-              }
-            >
-              I build websites.
-            </Typography>
           </Box>
           <Box
             className={

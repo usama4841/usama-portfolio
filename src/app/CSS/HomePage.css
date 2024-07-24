@@ -83,7 +83,7 @@
   display: flex;
   padding: 20px;
   border-radius: 10px 60px 10px 60px;
-  background-color: #d5d5d5;
+  background-color: #efefef;
   width: 80%;
   align-items: center;
   height: auto;
@@ -92,12 +92,7 @@
 }
 
 .SecondBoxWrapper:hover {
-  padding: 20px;
   border-radius: 60px 10px 60px 10px;
-  background-color: #d5d5d5;
-  width: 80%;
-  align-items: center;
-  height: auto;
   transition: 1s ease-in;
 }
 
@@ -105,19 +100,16 @@
   display: flex;
   padding: 20px;
   border-radius: 10px 60px 10px 60px;
-  background-color: #454545;
+  background-color: #252525;
   width: 80%;
   align-items: center;
   height: auto;
+  transition: 1s ease-out;
 }
 
 .DarkSecondBoxWrapper:hover {
-  padding: 20px;
   border-radius: 60px 10px 60px 10px;
-  background-color: #454545;
-  width: 80%;
-  align-items: center;
-  height: auto;
+  background-color: #383838;
   transition: 1s ease-in;
 }
 

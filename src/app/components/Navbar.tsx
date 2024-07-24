@@ -47,6 +47,8 @@ export default function NavbarComponent() {
               <Image
                 src={mode === "light" ? PortfolioLogo : DarkLogo}
                 alt="Portfolio"
+                height={80}
+                width={100}
               />
             </Link>
           </Typography>

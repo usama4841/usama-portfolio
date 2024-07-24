@@ -129,7 +129,7 @@ export default function Page() {
                       : "DarkProjectDescription pb-3"
                   }
                 >
-                  {project.description.substring(0, 69) + "..."}
+                  {project.description.substring(0, 99) + "..."}
                 </Typography>
                 <Typography
                   className={

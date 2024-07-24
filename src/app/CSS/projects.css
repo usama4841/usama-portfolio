@@ -267,9 +267,16 @@
 .ProjectItem {
   padding-bottom: 15px;
   background-color: #ffffff;
-  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 5px 8px rgba(193, 193, 193, 0.4);
   border-radius: 10px;
   overflow-x: hidden;
+  transition: 0.5s ease-out;
+}
+
+.ProjectItem:hover {
+  box-shadow: 2px 5px 8px rgb(185, 185, 185);
+  transform: scale(1.05);
+  transition: 0.5s ease-in;
 }
 
 .DarkProjectItem {
@@ -277,6 +284,12 @@
   background-color: #363636;
   border-radius: 10px;
   overflow-x: hidden;
+  transition: 0.5s ease-out;
+}
+
+.DarkProjectItem:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in;
 }
 
 .ProjectLink {

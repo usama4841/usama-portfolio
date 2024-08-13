@@ -16,6 +16,7 @@ import * as yup from "yup";
 import "@/app/CSS/contactus.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTheme } from "@/app/context/themeContext";
+import moment from "moment";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -28,10 +29,7 @@ const schema = yup.object().shape({
   message: yup
     .string()
     .required("Message is required")
-    .min(
-      50,
-      "please provide detailed description of more than 50 characters"
-    ),
+    .min(50, "please provide detailed description of more than 50 characters"),
 });
 
 interface ContactTypes {
@@ -77,10 +75,6 @@ const contactUsFields: Array<{
   },
 ];
 
-const Service_Id = process.env.NEXT_PUBLIC_SERVICE_KEY as string;
-const Template_Id = process.env.NEXT_PUBLIC_TEMPLATE_KEY as string;
-const Public_Key = process.env.NEXT_PUBLIC_KEY as string;
-
 const ContactForm = () => {
   const { mode } = useTheme();
   const {
@@ -96,22 +90,39 @@ const ContactForm = () => {
   const [snackBarMessage, setSnackBarMessage] = useState("");
   const [isSnackbarSuccess, setIsSnackbarSuccess] = useState(true);
 
-  const onSubmit = async (data: any) => {
+  const currentDate = moment();
+  const formattedDate = currentDate.format("MMMM Do YYYY, h:mm:ss a");
+  console.log("Formatted Date:", formattedDate);
+
+  const onSubmit = async (data: ContactTypes) => {
     try {
       const templateParams = {
-        ...data,
-        from: data.email,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        date: formattedDate,
+        message: data.message,
+        from_name: data.name,
         reply_to: data.email,
-        date: new Date(),
       };
-      console.log("data", data);
-      await emailjs.send(Service_Id, Template_Id, templateParams, Public_Key);
+
+      console.log("Data being sent:", templateParams);
+
+      const response = await emailjs.send(
+        "service_191fruh",
+        "template_zbu6eok",
+        templateParams,
+        "dF5_BPCuneX-vrxpa"
+      );
+
+      console.log("EmailJS Response:", response);
 
       setSnackBarMessage("Thank you, we'll contact you soon.");
       setIsSnackbarSuccess(true);
       setOpenSnackbar(true);
       reset();
     } catch (error) {
+      console.error("EmailJS Error:", error);
       setIsSnackbarSuccess(false);
       setSnackBarMessage("Something went wrong. Please try again later.");
       setOpenSnackbar(true);

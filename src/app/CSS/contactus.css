@@ -226,6 +226,8 @@
 }
 
 .SubmitButton {
+  color: black;
+  border-color: rgba(0, 0, 0, 0.87);
   background: linear-gradient(
     90deg,
     rgb(84, 131, 142) 19% rgb(3, 89, 109, 1) 100%
@@ -235,6 +237,7 @@
 
 .SubmitButton:hover {
   color: #d9d9d9;
+  border-color: transparent;
   background: linear-gradient(
     90deg,
     rgb(3, 89, 109, 1) 19%,

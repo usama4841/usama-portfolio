@@ -203,7 +203,6 @@ const ContactForm = () => {
           }
           type="submit"
           variant="outlined"
-          color="inherit"
           fullWidth
         >
           Get In Touch

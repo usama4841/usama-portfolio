@@ -29,8 +29,8 @@ const schema = yup.object().shape({
     .string()
     .required("Message is required")
     .min(
-      100,
-      "please provide detailed description of more than 100 characters"
+      50,
+      "please provide detailed description of more than 50 characters"
     ),
 });
 
@@ -77,6 +77,10 @@ const contactUsFields: Array<{
   },
 ];
 
+const Service_Id = process.env.NEXT_PUBLIC_SERVICE_KEY as string;
+const Template_Id = process.env.NEXT_PUBLIC_TEMPLATE_KEY as string;
+const Public_Key = process.env.NEXT_PUBLIC_KEY as string;
+
 const ContactForm = () => {
   const { mode } = useTheme();
   const {
@@ -100,13 +104,8 @@ const ContactForm = () => {
         reply_to: data.email,
         date: new Date(),
       };
-
-      await emailjs.send(
-        "service_tgincmg",
-        "template_zbu6eok",
-        templateParams,
-        "w6wr85loFcrZo76CC"
-      );
+      console.log("data", data);
+      await emailjs.send(Service_Id, Template_Id, templateParams, Public_Key);
 
       setSnackBarMessage("Thank you, we'll contact you soon.");
       setIsSnackbarSuccess(true);
